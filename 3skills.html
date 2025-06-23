@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills - Sameer Khan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      display: flex;
+      background-color: #ffffff;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      background-color: #f4a300;
+      width: 20%;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      width: 100%;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 10px 20px;
+      display: inline-block;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+    }
+
+    .main {
+      width: 75%;
+      padding: 40px;
+    }
+
+    .main h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    .skills-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .skill-card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    .skill-card i {
+      font-size: 24px;
+      color: #f4a300;
+      margin-bottom: 10px;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .skill-card ul {
+      padding-left: 20px;
+    }
+
+    .skill-card ul li {
+      margin-bottom: 6px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar, .main {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="1index.html" class="nav-link" data-icon="house"> HOME</a></li>
+      <li><a href="2aboutme.html" class="nav-link" data-icon="user"> ABOUT ME</a></li>
+      <li><a href="3skills.html" class="nav-link" data-icon="brain"> SKILLS</a></li>
+      <li><a href="4resume.html" class="nav-link" data-icon="file"> RESUME</a></li>
+      <li><a href="5portfolio.html" class="nav-link" data-icon="briefcase"> PORTFOLIO</a></li>
+      <li><a href="6acheivements.html" class="nav-link" data-icon="trophy"> ACHEIVEMENTS</a></li>
+      <li><a href="7contact.html" class="nav-link" data-icon="address-card"> CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>My Skills</h1>
+    <div class="skills-section">
+      <div class="skill-card">
+        <i class="fa-solid fa-code"></i>
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>React.js</li>
+          <li>Bootstrap</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-server"></i>
+        <h3>Backend</h3>
+        <ul>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>RESTful APIs</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-database"></i>
+        <h3>Database</h3>
+        <ul>
+          <li>MongoDB, Mongoose</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-brain"></i>
+        <h3>Programming & DSA</h3>
+        <ul>
+          <li>Java Development</li>
+          <li>DSA</li>
+          <li>Problem Solving</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-tools"></i>
+        <h3>Tools</h3>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>AI Tools Monitoring</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-users"></i>
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Team Leadership</li>
+          <li>Communication</li>
+          <li>Mentoring, Organization</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

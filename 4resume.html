@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume - Sameer Khan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 20%;
+      background: #f4a300;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      display: block;
+      padding: 10px;
+      transition: 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+    }
+
+    .main {
+      width: 75%;
+      padding: 50px;
+      background: #f5f5f5;
+    }
+
+    .main h1 {
+      font-size: 48px;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 40px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-left: 5px solid #f4a300;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      color: #f4a300;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .right-icons {
+      width: 5%;
+      background-color: #f4a300;
+      padding: 40px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 25px;
+    }
+
+    .right-icons i {
+      font-size: 20px;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+
+    .right-icons i.active {
+      background-color: white;
+      color: black;
+    }
+
+    @media(max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar, .main, .right-icons {
+        width: 100%;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedIcon = localStorage.getItem("activeIcon");
+      if (savedIcon) {
+        document.querySelectorAll(".right-icons i").forEach(icon => {
+          icon.classList.remove("active");
+          if (icon.classList.contains(savedIcon)) {
+            icon.classList.add("active");
+          }
+        });
+      }
+
+      document.querySelectorAll(".nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+          const iconName = "fa-" + link.dataset.icon;
+          localStorage.setItem("activeIcon", iconName);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    
+    <ul>
+     <li><a href="1index.html" class="nav-link" data-icon="house"> HOME</a></li>
+      <li><a href="2aboutme.html" class="nav-link" data-icon="user"> ABOUT ME</a></li>
+      <li><a href="3skills.html" class="nav-link" data-icon="brain"> SKILLS</a></li>
+      <li><a href="4resume.html" class="nav-link" data-icon="file"> RESUME</a></li>
+      <li><a href="5portfolio.html" class="nav-link" data-icon="briefcase"> PORTFOLIO</a></li>
+      <li><a href="6acheivements.html" class="nav-link" data-icon="trophy"> ACHEIVEMENTS</a></li>
+      <li><a href="7contact.html" class="nav-link" data-icon="address-card"> CONTACT</a></li>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>RESUME</h1>
+
+    <div class="section">
+      <h2>EDUCATION</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Computer Science</h3>
+          <p>Studied core CS subjects including data structures, algorithms, and system design.</p>
+        </div>
+        <div class="card">
+          <h3>Data Science</h3>
+          <p>Hands-on projects with Python, statistics, machine learning and data analysis tools.</p>
+        </div>
+        <div class="card">
+          <h3>Full Stack</h3>
+          <p>Built end-to-end applications with HTML, CSS, JavaScript, React, Node.js and MongoDB.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>EXPERIENCE</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Web Designer</h3>
+          <p>Designed responsive front-end layouts using HTML, CSS and Bootstrap on student projects.</p>
+        </div>
+        <div class="card">
+          <h3>Data Science Intern</h3>
+          <p>Worked on data preprocessing, exploratory data analysis, and built machine learning models using Python and Pandas.</p>
+        </div>
+        <div class="card">
+          <h3>Frontend Developer Intern</h3>
+          <p>Developed interactive and responsive web components using HTML, CSS, JavaScript</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Icon Bar -->
+  <div class="right-icons">
+    <i class="fa-solid fa-house"></i>
+    <i class="fa-solid fa-user"></i>
+    <i class="fa-solid fa-brain"></i>
+    <i class="fa-solid fa-file"></i>
+    <i class="fa-solid fa-briefcase"></i>
+    <i class="fa-solid fa-trophy"></i>
+    <i class="fa-solid fa-address-card"></i>
+  </div>
+
+</body>
+</html>

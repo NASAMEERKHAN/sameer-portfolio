@@ -1,0 +1,218 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Sameer Khan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      display: flex;
+      background-color: #ffffff;
+      height: 100vh;
+      color: #333;
+    }
+
+    .sidebar {
+      background-color: #f4a300;
+      width: 20%;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      width: 100%;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 10px 20px;
+      display: inline-block;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+    }
+
+    .main {
+      background-color: #ffffff;
+      width: 60%;
+      padding: 40px;
+    }
+
+    .main h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .main h2 {
+      font-size: 22px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .contact-info, .contact-form {
+      margin-top: 30px;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+      color: #f4a300;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .contact-form button {
+      background-color: #f4a300;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #000;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      font-size: 20px;
+      color: #f4a300;
+    }
+
+    .right-icons {
+      width: 5%;
+      background-color: #f4a300;
+      padding: 40px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 25px;
+    }
+
+    .right-icons i {
+      font-size: 20px;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+      background-color: transparent;
+    }
+
+    .right-icons i.active {
+      background-color: white;
+      color: black;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar, .main, .right-icons {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="1index.html" class="nav-link" data-icon="house"> HOME</a></li>
+      <li><a href="2aboutme.html" class="nav-link" data-icon="user"> ABOUT ME</a></li>
+      <li><a href="3skills.html" class="nav-link" data-icon="brain"> SKILLS</a></li>
+      <li><a href="4resume.html" class="nav-link" data-icon="file"> RESUME</a></li>
+      <li><a href="5portfolio.html" class="nav-link" data-icon="briefcase"> PORTFOLIO</a></li>
+      <li><a href="6acheivements.html" class="nav-link" data-icon="trophy"> ACHEIVEMENTS</a></li>
+      <li><a href="7contact.html" class="nav-link" data-icon="address-card"> CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>CONTACT ME</h1>
+    <h2>Let's get in touch!</h2>
+
+    <div class="contact-info">
+      <p><i class="fa-solid fa-envelope"></i> sameerlhan456@gmail.com</p>
+      <p><i class="fa-solid fa-phone"></i> 9866956670</p>
+      <p><i class="fa-solid fa-location-dot"></i> India</p>
+    </div>
+
+    <div class="contact-form">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/sameer-khan-5126902a8" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.github.com/NASAMEERKHAN" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:sameerlhan456@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <!-- Right Icon Bar -->
+  <div class="right-icons">
+    <i class="fa-solid fa-house"></i>
+    <i class="fa-solid fa-user"></i>
+    <i class="fa-solid fa-brain"></i>
+    <i class="fa-solid fa-file"></i>
+    <i class="fa-solid fa-briefcase"></i>
+    <i class="fa-solid fa-trophy"></i>
+    <i class="fa-solid fa-address-card"></i>
+  </div>
+
+</body>
+</html>
